@@ -6,7 +6,12 @@
 <p style='width: 50%'>{{post.content}}</p>
 <hr>
 
-<h4>{{post.publication_date}}</h4>
+<p>Tags:</p>
+{% for tag in post.tags.all %}
+    {{tag.name}} {% if not forloop.last %},{% endif %}
+{% endfor %}
+
+<p>{{post.publication_date}}</p>
 <h4>writter: {{post.author}} </h4>
 
 {% endblock content %}

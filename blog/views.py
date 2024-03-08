@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Post
+from .models import Post, Tag
 
 def index(request):
     return render(request, 'index.html')
